@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+</head>
+<body>
+  <div id="app">
+    <!-- 1. 顶部区块 -->
+    <div class="header-container">
+      <h1>天气预报</h1>
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="输入城市名称，例如 Shanghai">
+        <button id="search-btn">查询天气</button>
+      </div>
+    </div>
+
+    <!-- 错误提示容器：平时隐藏，出错时展示 -->
+    <div id="error-message" class="error-banner" style="display: none;"></div>
+
+    <!-- 2. 中上方核心主视觉区 -->
+    <main class="main-hero" id="main-hero">
+      <div class="location-time">
+        <h2 id="city-name">城市名称</h2>
+        <p id="current-date">日期与时间</p>
+      </div>
+      
+      <!-- 加载动画组件 -->
+      <div class="loading-spinner"></div>
+
+      <div class="weather-main-info">
+        <div class="weather-icon-container">
+          <img id="weather-icon" src="" alt="天气图标">
+          <span id="weather-description">天气状况</span>
+        </div>
+        <div class="temperature-container">
+          <div id="current-temp">--°C</div>
+          <p id="temp-range">最高: --°C / 最低: --°C</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- 3. 未来多日预报区 -->
+  <div class="forecast-container">
+    <h3>未来多日天气预报</h3>
+    <div id="forecast-list" class="forecast-list">
+    <!-- 动态生成的每日预报卡片会插在这里 -->
+    </div>
+  </div>
+
+    <!-- 3. 中下方详细数据区 -->
+    <div class="details-container">
+      <div class="card">
+        <h3>湿度</h3>
+        <p id="humidity">--%</p>
+      </div>
+      <div class="card">
+        <h3>风速</h3>
+        <p id="wind-speed">-- m/s</p>
+      </div>
+      <div class="card">
+        <h3>气压状况</h3>
+        <p id="air-quality">--</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
